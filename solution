@@ -1,0 +1,19 @@
+def order(sentence):
+    return " ".join(sorted(sentence.split(), key=lambda x: int(filter(str.isdigit, x))))
+    
+    
+or
+
+def order(sentence):
+    res = []
+    for i in range(1, 10):
+        for j in list(sentence.split()):
+            if str(i) in j:
+               res.append(j)
+    return " ".join(res)
+    
+
+or
+
+def order(words):
+  return ' '.join(sorted(words.split(), key=lambda w:sorted(w)))
